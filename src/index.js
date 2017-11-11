@@ -272,7 +272,7 @@ export default class ReactUploadFile extends Component {
     };
     const chooseFileButton = React.cloneElement(this.props.chooseFileButton, {
       onClick: this.commonChooseFile
-    }, [...(this.props.chooseFileButton.props.children ? [this.props.chooseFileButton.props.children] : []), (<input type="file" name="ajax-upload-file-input" style={{ display: 'none' }} onChange={this.commonChangeFile} {...inputProps} key="file-button" />)]);
+    }, [...(this.props.chooseFileButton.props.children ? [this.props.chooseFileButton.props.children] : []), (<input type="file" name="ajax-upload-file-input" style={{ display: 'inline' }} onChange={this.commonChangeFile} {...inputProps} key="file-button" />)]);
     const uploadFileButton = this.props.uploadFileButton && React.cloneElement(this.props.uploadFileButton, {
       onClick: this.commonUploadFile
     });
